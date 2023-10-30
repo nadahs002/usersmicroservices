@@ -63,7 +63,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers("/login").permitAll()
                 .requestMatchers("/all").hasAuthority("ADMIN")
+                .requestMatchers("addUser").permitAll()
+                .requestMatchers("/activateUser/{username}/{code}").permitAll()
                 .anyRequest().authenticated();
         return http.build();
     }
+
+
 }

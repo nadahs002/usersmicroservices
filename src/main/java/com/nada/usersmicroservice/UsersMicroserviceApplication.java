@@ -36,12 +36,13 @@ public class UsersMicroserviceApplication {
 		userService.addRoleToUser("nada", "USER");
 		userService.addRoleToUser("hanine", "USER");
 	}
+	*/
 	@Bean
 	BCryptPasswordEncoder getBCE() {
 		return new BCryptPasswordEncoder();
 	}
 
-*/
+
 
 
 }
